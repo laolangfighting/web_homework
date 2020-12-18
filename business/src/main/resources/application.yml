@@ -1,0 +1,28 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: business
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.0:3306/homework?characterEncoding=utf8
+    username: root
+    password: 123456
+
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+
+feign:
+  hystrix:
+    enabled: true
+
+
